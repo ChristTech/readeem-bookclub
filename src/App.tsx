@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { ReadingPlan } from './types';
 import { INITIAL_PLANS, MOCK_USER } from './constants';
 import { MainLayout } from './layouts/MainLayout';
@@ -44,6 +45,7 @@ const App: React.FC = () => {
                     <Route path="/admin" element={<AdminPage />} />
                 </Route>
             </Routes>
+            <Analytics />
         </ToastProvider>
     );
 };
