@@ -52,7 +52,7 @@ export const HomePage: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <div className="relative">
                         <div className="rounded-brand overflow-hidden shadow-2xl border-8 border-white h-[600px] relative">
-                            <img src="/founder.webp" className="w-full h-full object-cover" alt="Pastor David Owolabi" />
+                            <img src="public/founder.webp" className="w-full h-full object-cover" alt="Pastor David Owolabi" />
 
                             {/* Speech Bubbles */}
                             <div className="absolute top-20 right-[-30px] speech-bubble animate-bounce-slow">
