@@ -1,0 +1,7 @@
+{
+  "name": "READEEM - Gospel Reading Book Club",
+  "description": "A spiritually grounded, community-focused platform for daily gospel book reading, consistency tracking, and fellowship.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

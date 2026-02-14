@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .ribbon-shape {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%);
+  }
+
+  .ribbon-card-shape {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%);
+  }
+
+  .glass-card {
+    @apply bg-white/65 backdrop-blur-xl border border-white/50 shadow-lg;
+  }
+
+  .glass-dark {
+    @apply bg-black/80 backdrop-blur-2xl border border-white/10 shadow-2xl;
+  }
+
+  .rounded-brand {
+    @apply rounded-[3.5rem];
+  }
+
+  .rounded-card {
+    @apply rounded-[2.5rem];
+  }
+
+  /* Speech Bubble for 'Building Leaders' section */
+  .speech-bubble {
+    @apply relative bg-white rounded-3xl p-6 shadow-xl flex flex-col items-center justify-center text-center;
+  }
+
+  .speech-bubble::after {
+    content: '';
+    @apply absolute w-8 h-8 bg-white shadow-sm;
+    bottom: -10px;
+    right: 30px;
+    /* Adjust based on design */
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  .speech-bubble.left-tail::after {
+    left: 30px;
+    right: auto;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-[#F8F9FA] text-[#1A1A1A] min-h-screen;
+  background-image: radial-gradient(at 0% 0%, rgba(196, 18, 48, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(252, 231, 209, 0.4) 0px, transparent 50%);
+}
+
+@keyframes flipIn {
+  from {
+    opacity: 0;
+    transform: perspective(2000px) rotateY(-30deg) translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(2000px) rotateY(0) translateX(0);
+  }
+}
+
+.animate-page-flip {
+  animation: flipIn 0.5s cubic-bezier(0.3, 1, 0.5, 1) forwards;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
